@@ -1,0 +1,4 @@
+# Project exclude paths
+/bin/
+/.idea/
+/Lec01_01.iml
