@@ -20,8 +20,8 @@ public class Ball {
      * @param color the color of the new ball object
      */
     public Ball(double volume, Color color) {
-        this.volume = volume;
-        this.color = color;
+        volume = volume;
+        color = color;
     }
     
     /**
@@ -37,7 +37,7 @@ public class Ball {
      * @return the volume of the ball.
     */
     public double getVolume() {
-        return this.volume;
+        return 0;
     }
     
     /**
@@ -45,7 +45,7 @@ public class Ball {
      * @return the color of the ball.
     */
     public Color getColor() {
-        return this.color;
+        return null;
     }
 
 }

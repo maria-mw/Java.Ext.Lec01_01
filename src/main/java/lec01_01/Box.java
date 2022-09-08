@@ -4,7 +4,7 @@
 package lec01_01;
 
 import java.lang.Iterable;
-import java.util.*;
+import java.util.Iterator;
 
 /**
  * This is a container that can be used to contain Balls. The key
@@ -17,18 +17,15 @@ public class Box implements Iterable<Ball> {
      * ballContainer is used to internally store balls for this Box
      */
     private BallContainer ballContainer;
-    private final double volume;
 
     /**
      * Constructor that creates a new box.
      * @param maxVolume Total volume of balls that this box can contain.
      */
     public Box(double maxVolume) {
-        this.ballContainer = new BallContainer();
-        this.volume = maxVolume;
+        // Your code goes here.  Remove the exception after you're done.
+        throw new RuntimeException("Method not implemented");
     }
-
-
 
     /**
      * Implements the Iterable interface for this box.
@@ -54,12 +51,9 @@ public class Box implements Iterable<Ball> {
      * if the box is too full to fit the new ball.
      */
     public boolean add(Ball b) {
-        if (this.volume >= (this.ballContainer.getVolume() +  b.getVolume())) {
-           return ballContainer.add(b);
-        }
-        return false;
+        // Your code goes here.  Remove the exception after you're done.
+        throw new RuntimeException("Method not implemented");
     }
-
 
     /**
      * This method returns an iterator that iterates over all balls in
@@ -69,19 +63,8 @@ public class Box implements Iterable<Ball> {
      * ascending order by Ball size.
      */
     public Iterator<Ball> getBallsFromSmallest() {
-        Set<Ball> balls = new TreeSet<>((o1, o2) -> {
-            if (o1.getVolume() > o2.getVolume()) {
-                return 1;
-            } else if (o1.getVolume() < o2.getVolume()) {
-                return -1;
-            } else {
-                return 0;
-            }
-        });
-        for (Ball ball : ballContainer) {
-            balls.add(ball);
-        }
-        return Collections.unmodifiableSet(balls).iterator();
+        // Your code goes here.  Remove the exception after you're done.
+        throw new RuntimeException("Method not implemented");
     }
 
     /**
