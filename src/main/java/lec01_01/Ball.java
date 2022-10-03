@@ -4,6 +4,7 @@
 package lec01_01;
 
 import java.awt.Color;
+import java.util.Objects;
 
 /**
  * This is a simple object that has a volume.
@@ -20,8 +21,10 @@ public class Ball {
      * @param color the color of the new ball object
      */
     public Ball(double volume, Color color) {
-        volume = volume;
-        color = color;
+        if (volume > 0) {
+            this.volume = volume;
+            this.color = color;
+        }
     }
     
     /**
@@ -29,7 +32,12 @@ public class Ball {
      * @param volume A string representing the volume of the new object.
      */
     public Ball(String volume, Color color) {
-		this(Double.parseDouble(volume), color);
+        try {
+            this.volume = Double.parseDouble(volume);
+            this.color = color;
+        } catch (NumberFormatException e) {
+            System.out.println("Wrong number format");
+        }
     }    
 
     /**
@@ -37,7 +45,7 @@ public class Ball {
      * @return the volume of the ball.
     */
     public double getVolume() {
-        return 0;
+        return this.volume;
     }
     
     /**
@@ -45,9 +53,26 @@ public class Ball {
      * @return the color of the ball.
     */
     public Color getColor() {
-        return null;
+        return this.color;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null) return false;
+        if (Ball.class == o.getClass()) {
+            Ball ball = (Ball) o;
+            return Double.compare(ball.volume, volume) == 0 && Objects.equals(color, ball.color);
+        }
+        else {
+            return false;
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(volume, color);
+    }
 }
 
 

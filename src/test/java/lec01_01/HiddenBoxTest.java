@@ -67,8 +67,8 @@ public class HiddenBoxTest {
 
     }
 
-    /*
-    /** Test to check that Box.add(Ball) is implemented correctly 
+
+    /** Test to check that Box.add(Ball) is implemented correctly
     @Test
     public void testAdd() {
         box.clear();
@@ -85,7 +85,7 @@ public class HiddenBoxTest {
                         box.add(b[i]));
         }
     }
-    */
+
 
     /*
     // Test to check that Box.getBallsFromSmallest() is implemented correctly
@@ -135,7 +135,7 @@ public class HiddenBoxTest {
      * correctly. Depending on how <code>getBallsFromSmallest()</code>
      * is implemented, remove() might have to be overridden and this
      * test helps ensure that remove() is not broken in the process.
-     
+
     @Test
     public void testRemove() {
         box.clear();
